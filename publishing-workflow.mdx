@@ -1,0 +1,171 @@
+---
+title: Publishing Workflow
+description: Understand how to review, update, and publish documentation safely. This page covers a practical workflow for maintaining accurate docs over time.
+---
+
+## Overview
+
+A publishing workflow helps you move content from draft to live documentation without losing quality or context. In Hamid Raza, you can use a simple review process to keep pages accurate, consistent, and easy to maintain.
+
+This guide shows a practical starter-kit workflow for draft content, approvals, versioned updates, and ongoing maintenance. You can adapt it to your team size, release cadence, and content ownership model.
+
+<Callout kind="tip">
+
+This page is a starter kit template. Replace the sample process with your own review rules, publishing permissions, and release schedule.
+
+</Callout>
+
+<Columns cols={2}>
+  <Card title="Draft content" icon="book-open" href="#draft-vs-published-content">
+
+Keep work in progress separate from live docs so readers only see approved information.
+
+  </Card>
+  <Card title="Review and approval" icon="check-circle" href="#review-and-approval-steps">
+
+Use a repeatable review loop to catch errors before publishing.
+
+  </Card>
+  <Card title="Versioned updates" icon="zap" href="#versioned-updates">
+
+Track meaningful changes so you can publish updates with confidence.
+
+  </Card>
+  <Card title="Content maintenance" icon="settings" href="#content-maintenance">
+
+Schedule regular checks to keep documentation current over time.
+
+  </Card>
+</Columns>
+
+## Draft vs published content
+
+Draft content is where you write, experiment, and make revisions. Published content is the version readers rely on, so it should reflect approved messaging, verified instructions, and current product behavior.
+
+A clean separation between draft and published content reduces risk. It also makes it easier to collaborate because reviewers can focus on final quality instead of unfinished ideas.
+
+### Recommended status model
+
+| Status | Purpose | Visibility |
+|--------|---------|------------|
+| Draft | Work in progress | Internal only |
+| In review | Ready for feedback | Internal only |
+| Approved | Ready to publish | Internal only |
+| Published | Live documentation | Public or team visible |
+
+### Practical rule
+
+Keep a page in draft until it meets your review checklist. If the content changes because of product updates, re-open the draft and re-validate the affected sections before publishing again.
+
+## Review and approval steps
+
+A lightweight approval process helps you publish safely without slowing down your team. The key is to make the same checks every time.
+
+<Steps>
+  <Step title="Write the draft" icon="pen-tool">
+
+Create the page content in your editor and keep the structure clear. Focus on what changed, why it matters, and what readers should do next.
+
+  </Step>
+  <Step title="Review accuracy" icon="search">
+
+Check links, examples, terminology, and any product-specific instructions. Verify that the steps still match the current behavior.
+
+  </Step>
+  <Step title="Approve changes" icon="check-circle">
+
+Have a reviewer confirm that the page is complete, readable, and ready to go live.
+
+  </Step>
+  <Step title="Publish the page" icon="rocket">
+
+Move the approved content into the published site or release branch.
+
+  </Step>
+</Steps>
+
+<Callout kind="info">
+
+If your team publishes often, keep the approval checklist short. A small checklist that you actually use is better than a long one that people skip.
+
+</Callout>
+
+## Versioned updates
+
+Versioned updates help you explain what changed and when. This is especially useful when readers need to compare older instructions with newer behavior.
+
+Use version labels to group changes by release, milestone, or documentation cycle. That way, you can trace a page update back to the reason it changed.
+
+<CodeGroup tabs="Markdown,JSON">
+  ```markdown
+## v1.2.0
+
+- Updated the publishing checklist
+- Added review ownership guidance
+- Clarified draft and published states
+  ```
+
+  ```json
+{
+  "version": "v1.2.0",
+  "status": "published",
+  "updatedBy": "Documentation Team",
+  "updatedAt": "2026-01-15"
+}
+  ```
+</CodeGroup>
+
+### Update practices
+
+- Use a clear version label for each meaningful revision.
+- Include the reason for the change in the release note.
+- Keep older versions available when readers may still depend on them.
+- Retire outdated instructions once the new process is stable.
+
+## Content maintenance
+
+Publishing does not end when a page goes live. You should review content regularly to keep it useful and correct.
+
+A maintenance routine is easier when you assign ownership. One person can own the page, while another person reviews critical changes before publication.
+
+<Tabs>
+  <Tab title="Weekly checks" icon="calendar">
+    Review high-traffic pages, broken links, and any content that references recent product changes.
+  </Tab>
+  <Tab title="Monthly checks" icon="clipboard-check">
+    Audit core pages for consistency, outdated screenshots, and missing context.
+  </Tab>
+  <Tab title="Release checks" icon="package">
+    Re-validate affected pages before and after product releases so documentation stays in sync.
+  </Tab>
+</Tabs>
+
+### Maintenance checklist
+
+1. Confirm the page still matches the product behavior.
+2. Replace outdated examples with current ones.
+3. Remove temporary notes and internal placeholders.
+4. Verify internal links and cross-references.
+5. Re-run the approval process for major changes.
+
+<Expandable title="What should you update first?" default-open="true">
+
+Start with the sections that affect reader trust: installation steps, output examples, version numbers, and troubleshooting notes. These tend to become outdated first.
+
+</Expandable>
+
+<Expandable title="How do you handle minor edits?" default-open="false">
+
+For small wording fixes, you can use a lighter review path as long as the change does not affect meaning, steps, or safety. If in doubt, route the edit through the full review flow.
+
+</Expandable>
+
+## Suggested workflow summary
+
+1. Draft the content.
+2. Review it for accuracy and completeness.
+3. Approve it with a second set of eyes.
+4. Publish the final version.
+5. Revisit the page on a regular schedule.
+
+This workflow keeps your documentation predictable and easy to maintain. It also gives you a simple process you can customize as your documentation program grows.

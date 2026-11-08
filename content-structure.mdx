@@ -1,0 +1,231 @@
+---
+title: Content Structure
+description: Learn how to structure documentation for clarity and scale. Use this guide to keep content organized as your project grows.
+---
+
+## Overview
+
+Good documentation helps people find the right answer quickly. In Hamid Raza, you can use a simple structure that scales from a single page to a full documentation site without becoming hard to maintain.
+
+This starter kit gives you a default pattern for organizing topics, naming pages, and connecting related content. You can adapt it to fit your product, team, and audience.
+
+<Callout kind="tip">
+
+This page is a starter template. Adapt the structure, labels, and examples to match your product and workflow.
+
+</Callout>
+
+## Core structure
+
+Use a consistent information architecture so readers always know where to go next. A strong structure usually starts with broad topics, then narrows into specific tasks, settings, or reference material.
+
+<Columns cols={2}>
+  <Card title="Information architecture" icon="database" href="#information-architecture">
+    
+  Group related topics so users can scan and navigate with confidence.
+  
+  </Card>
+  <Card title="Page hierarchy" icon="book-open" href="#page-hierarchy">
+    
+  Organize content from general concepts to specific instructions.
+  
+  </Card>
+  <Card title="Naming conventions" icon="settings" href="#page-naming-conventions">
+    
+  Use predictable names so pages stay easy to browse and maintain.
+  
+  </Card>
+  <Card title="Cross-linking" icon="arrow-right" href="#cross-linking-related-docs">
+    
+  Connect related pages so readers can move through the docs naturally.
+  
+  </Card>
+</Columns>
+
+## Information architecture
+
+Information architecture is the plan for how your documentation is grouped. Think of it as the map behind your content. When the map is clear, readers spend less time searching and more time learning.
+
+A practical structure often includes these layers:
+
+1. Product overview
+2. Getting started
+3. Guides
+4. Reference
+5. Troubleshooting
+
+This layout works well because it matches common user intent. People usually start with orientation, move into setup, then look for deeper guidance or reference material.
+
+### Example section model
+
+| Section | Purpose | Example content |
+|--------|---------|-----------------|
+| Overview | Explain what the product does | Intro pages, feature summaries |
+| Setup | Help readers begin quickly | Installation, first steps |
+| Guides | Teach workflows | How-to articles, best practices |
+| Reference | Document details | Options, fields, endpoints |
+| Support | Solve problems | FAQs, fixes, troubleshooting |
+
+## Page hierarchy
+
+A clear hierarchy makes your docs easier to skim. Keep headings logical and avoid jumping from broad sections straight to tiny details. Start with H2 headings, then use H3 and H4 headings when you need more structure.
+
+<Steps>
+  <Step title="Start with the main idea" icon="book-open">
+    
+  Use the first H2 to state the purpose of the page.
+  
+  </Step>
+  <Step title="Break content into sections" icon="layout">
+    
+  Add H3 sections for major themes, such as setup, usage, or troubleshooting.
+  
+  </Step>
+  <Step title="Add detail only when needed" icon="chevron-right">
+    
+  Use H4 headings for subtopics that support the section above them.
+  
+  </Step>
+</Steps>
+
+<Callout kind="info">
+
+Avoid creating too many levels. If a page feels crowded, split it into smaller pages instead of adding deeper nesting.
+
+</Callout>
+
+## Page naming conventions
+
+Use page names that are easy to scan and hard to misunderstand. Short, descriptive titles work best. For example, prefer `Content Structure` over vague labels like `Guide 1` or `Misc Notes`.
+
+### Good naming patterns
+
+- Use nouns for reference pages, such as `API Keys` or `Notifications`
+- Use action phrases for tutorials, such as `Set Up Your Workspace`
+- Keep titles consistent across similar content
+- Match page titles to the reader’s intent
+
+### Avoid
+
+- Internal project codes
+- Abbreviations that new readers do not know
+- Duplicate titles across unrelated pages
+- Titles that are too broad to be useful
+
+<Tabs>
+  <Tab title="Concept page" icon="book-open">
+    
+  Use this format for topics that explain ideas, principles, or systems.
+  
+  ```markdown
+  ## Overview
+
+  Explain the concept in plain language.
+
+  ## Examples
+
+  Show how the concept appears in practice.
+
+  ## Related topics
+
+  Link to pages that expand on the idea.
+  ```
+  
+  </Tab>
+  <Tab title="How-to page" icon="play-circle">
+    
+  Use this format for task-focused content that helps readers complete one job.
+  
+  ```markdown
+  ## Before you begin
+
+  List what the reader needs.
+
+  ## Steps
+
+  Provide the exact procedure.
+
+  ## Next steps
+
+  Suggest related follow-up actions.
+  ```
+  
+  </Tab>
+  <Tab title="Reference page" icon="code">
+    
+  Use this format for factual material that readers may need to check quickly.
+  
+  ```markdown
+  ## Fields
+
+  List the available options or properties.
+
+  ## Examples
+
+  Show realistic usage.
+
+  ## Notes
+
+  Add constraints, limits, or defaults.
+  ```
+  
+  </Tab>
+</Tabs>
+
+## Cross-linking related docs
+
+Cross-linking helps readers move between related pages without having to search. Link only when the destination adds real value. Good links reduce repetition and help users build context across the docs.
+
+Use internal links for nearby topics and anchor links for sections on the same page. For example, if a page explains structure, it can point to related guidance on setup, configuration, or publishing.
+
+<CodeGroup tabs="Markdown,HTML">
+  ```markdown
+  ## Related topics
+
+  - [Quickstart](/quickstart)
+  - [Authentication](/authentication)
+  - [Changelog](/changelog)
+
+  See also [Page hierarchy](#page-hierarchy) for a deeper look at structure.
+  ```
+  ```html
+  <a href="/quickstart">Quickstart</a>
+  <a href="/authentication">Authentication</a>
+  <a href="/changelog">Changelog</a>
+  ```
+</CodeGroup>
+
+## Practical workflow
+
+You can keep content organized by following a repeatable process. This makes it easier to add new pages later without breaking the structure you already built.
+
+1. Define the page purpose
+2. Choose the right page type
+3. Write a clear title
+4. Add sections in a logical order
+5. Link to related pages
+6. Review and refine as the docs grow
+
+### A simple content plan
+
+<Expandable title="Example documentation map" default-open="false">
+
+- **Overview**: What the product is and who it is for
+- **Setup**: How to get started quickly
+- **Guides**: Common workflows and best practices
+- **Reference**: Settings, fields, and behavior details
+- **Support**: Troubleshooting and answers to common questions
+
+</Expandable>
+
+<Callout kind="success">
+
+If you keep titles, headings, and links consistent, your documentation becomes easier to navigate as your project scales.
+
+</Callout>
+
+## Next steps
+
+Use this page as a starting point, then tailor it to your product structure. You can add more sections, rename categories, or split large topics into separate pages when needed.
+
+For example, you might expand this starter kit with product-specific setup instructions, API reference content, or troubleshooting pages. Keep the structure predictable, and readers will always know where to begin.
